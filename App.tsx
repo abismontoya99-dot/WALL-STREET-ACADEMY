@@ -59,7 +59,7 @@ const App: React.FC = () => {
             <div className="absolute -top-20 -left-20 w-64 h-64 bg-amber-500/10 rounded-full blur-[100px]"></div>
             <div className="relative z-10">
               <h2 className="text-5xl md:text-7xl font-black mb-8 leading-none uppercase">¿LISTO PARA <span className="text-gradient italic">GANAR?</span></h2>
-              <p className="text-xl text-gray-400 mb-12">Cupos limitados disponibles para la generación del Q4 2024. No dejes pasar otro año.</p>
+              <p className="text-xl text-gray-400 mb-12">Cupos limitados disponibles para la generación de 2026. No dejes pasar otro año.</p>
               <a 
                 href="https://go.hotmart.com/B103361602G" 
                 target="_blank" 

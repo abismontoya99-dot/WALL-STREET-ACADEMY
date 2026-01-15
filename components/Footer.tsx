@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             <div className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-black cursor-pointer transition-colors">IG</div>
             <div className="w-10 h-10 rounded-full glass flex items-center justify-center hover:bg-amber-500 hover:text-black cursor-pointer transition-colors">YT</div>
           </div>
-          <p className="text-[10px] text-gray-600 uppercase tracking-widest">© 2024 Wall Street Academy. Todos los derechos reservados.</p>
+          <p className="text-[10px] text-gray-600 uppercase tracking-widest">© 2026 Wall Street Academy. Todos los derechos reservados.</p>
         </div>
       </div>
       
