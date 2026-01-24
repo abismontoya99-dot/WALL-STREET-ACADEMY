@@ -1,0 +1,7 @@
+{
+  "name": "Invertir en Bolsa de Valores USA",
+  "description": "Una página de aterrizaje interactiva y de alta gama para el curso Invertir en Bolsa de Valores USA, con gráficos en tiempo real, animaciones inmersivas y un chatbot de soporte impulsado por IA.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
