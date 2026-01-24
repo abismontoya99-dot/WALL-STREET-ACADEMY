@@ -1,6 +1,11 @@
 
-// Fix: Import React to resolve 'Cannot find namespace React' error when using React.ReactNode
 import React from 'react';
+
+declare global {
+  interface Window {
+    fbq: any;
+  }
+}
 
 export interface Message {
   role: 'user' | 'model';
