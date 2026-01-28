@@ -74,13 +74,13 @@ const Syllabus: React.FC = () => {
   const [expandedId, setExpandedId] = useState<string | null>("01");
 
   return (
-    <section id="modules" className="py-24 px-6 bg-[#0a0a0a]">
+    <section id="modules" className="py-12 md:py-16 px-6 bg-[#0a0a0a]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-amber-500 font-bold uppercase tracking-widest text-sm mb-4 italic">Currículo Élite</h2>
-          <h3 className="text-4xl md:text-6xl font-black uppercase mb-6">Un Camino <span className="text-gradient">Hacia la Maestría.</span></h3>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg font-light">
-            Selecciona un módulo para explorar las lecciones que transformarán tu visión financiera.
+        <div className="text-center mb-10 px-4">
+          <h2 className="text-amber-500 font-bold uppercase tracking-[0.4em] text-[10px] mb-2 italic">Currículo Élite</h2>
+          <h3 className="text-2xl md:text-4xl font-black uppercase mb-4 leading-[1.1] tracking-tighter">Un Camino <br/><span className="text-gradient">Hacia la Maestría Global.</span></h3>
+          <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base font-light leading-relaxed">
+            Hemos estructurado el programa más completo para llevarte de cero a profesional en 12 semanas.
           </p>
         </div>
 
@@ -89,49 +89,38 @@ const Syllabus: React.FC = () => {
             <div 
               key={m.id} 
               onClick={() => setExpandedId(expandedId === m.id ? null : m.id)}
-              className={`glass p-8 rounded-[2rem] border transition-all duration-500 cursor-pointer group flex flex-col h-full
-                ${expandedId === m.id ? 'border-amber-500/50 ring-1 ring-amber-500/20 bg-amber-500/5' : 'border-white/5 hover:border-white/20'}
+              className={`glass p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border transition-all duration-700 cursor-pointer group flex flex-col h-full
+                ${expandedId === m.id ? 'border-amber-500/50 ring-1 ring-amber-500/20 bg-amber-500/5 scale-[1.01]' : 'border-white/5 hover:border-white/20'}
               `}
             >
-              <div className="flex justify-between items-start mb-4">
-                <span className={`text-4xl font-black transition-colors ${expandedId === m.id ? 'text-amber-500' : 'text-white/10 group-hover:text-white/20'}`}>
+              <div className="flex justify-between items-start mb-4 md:mb-6">
+                <span className={`text-3xl font-black transition-colors ${expandedId === m.id ? 'text-amber-500' : 'text-white/5 group-hover:text-white/10'}`}>
                   {m.id}
                 </span>
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${expandedId === m.id ? 'bg-amber-500 text-black rotate-45' : 'bg-white/5 text-white'}`}>
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-500 ${expandedId === m.id ? 'bg-amber-500 text-black rotate-45' : 'bg-white/5 text-white'}`}>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M12 4v16m8-8H4" />
                   </svg>
                 </div>
               </div>
               
-              <h4 className="text-xl font-bold mb-3 text-white transition-colors group-hover:text-amber-500">{m.title}</h4>
-              <p className="text-sm text-gray-500 mb-6 font-light leading-relaxed">{m.description}</p>
+              <h4 className="text-lg font-bold mb-2 text-white transition-colors group-hover:text-amber-500 uppercase tracking-tighter">{m.title}</h4>
+              <p className="text-xs text-gray-500 mb-4 font-light leading-relaxed">{m.description}</p>
               
-              <div className={`overflow-hidden transition-all duration-500 ease-in-out ${expandedId === m.id ? 'max-h-[500px] opacity-100 mt-auto' : 'max-h-0 opacity-0'}`}>
-                <div className="pt-6 border-t border-white/5">
-                  <ul className="space-y-3">
+              <div className={`overflow-hidden transition-all duration-700 ease-in-out ${expandedId === m.id ? 'max-h-[500px] opacity-100 mt-auto' : 'max-h-0 opacity-0'}`}>
+                <div className="pt-4 md:pt-6 border-t border-white/10">
+                  <ul className="space-y-2">
                     {m.lessons.map((lesson, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-sm text-gray-300">
-                        <div className="w-1.5 h-1.5 bg-amber-500 rounded-full shrink-0"></div>
+                      <li key={idx} className="flex items-center gap-2 text-xs text-gray-300">
+                        <div className="w-1 h-1 bg-amber-500 rounded-full shrink-0"></div>
                         {lesson}
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full mt-8 py-3 bg-white/5 hover:bg-white/10 rounded-xl text-xs font-bold uppercase tracking-widest text-amber-500 transition-colors">
-                    Ver Detalles del Módulo
-                  </button>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="mt-20 text-center">
-          <div className="inline-block glass px-8 py-4 rounded-full border border-amber-500/10">
-            <p className="text-gray-300 text-sm">
-              <span className="text-amber-500 font-bold">Bonus:</span> Incluye software de simulación y acceso al Trading Floor VIP.
-            </p>
-          </div>
         </div>
       </div>
     </section>
